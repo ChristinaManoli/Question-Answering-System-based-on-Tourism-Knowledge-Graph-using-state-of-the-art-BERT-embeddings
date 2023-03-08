@@ -1,0 +1,221 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix sch: <https://schema.org/> .
+@prefix stkg: <http://santorinitourismkg.com/vocab/> .
+
+
+#Classes
+
+sch:Place a rdfs:Class;
+	rdfs:label "Place".
+
+stkg:Village a rdfs:Class;
+	rdfs:subClassOf sch:Place;
+	rdfs:label "Village".
+	
+stkg:Myth a rdfs:Class;
+	rdfs:label "Myth".
+	
+stkg:LocalCuisine a rdfs:Class;
+	rdfs:label "Local Cuisine".	
+	
+stkg:LocalWine a rdfs:Class;
+	rdfs:label "Local Wine".
+	
+stkg:Transportation a rdfs:Class;
+	rdfs:label "Transportation".
+	
+stkg:Notable_Person a rdfs:Class;
+	rdfs:label "Notable Person".
+	
+stkg:Sand a rdfs:Class;
+	rdfs:label "Sand".
+	
+stkg:Climate a rdfs:Class;
+	rdfs:label "Climate".
+
+
+stkg:Activity a rdfs:Class;
+	rdfs:label "Activity".		
+stkg:Tour a rdfs:Class;
+	rdfs:subClassOf stkg:Activity;
+	rdfs:label "Tour".
+sch:Festival a rdfs:Class;
+	rdfs:subClassOf stkg:Activity;
+	rdfs:label "Festival".
+stkg:Water_Activity a rdfs:Class;
+	rdfs:subClassOf stkg:Activity;
+	rdfs:label "Water Activity".
+stkg:Ride a rdfs:Class;
+	rdfs:subClassOf stkg:Activity;
+	rdfs:label "Ride".
+stkg:Alternative_Activity a rdfs:Class;
+	rdfs:subClassOf stkg:Activity;
+	rdfs:label "Alternative Activity".
+
+sch:Beach a rdfs:Class;
+	rdfs:label "Beach".
+stkg:Well_Organized a rdfs:Class;
+	rdfs:subClassOf sch:Beach;
+	rdfs:label "Well Organized".
+stkg:Partly_Organized a rdfs:Class;
+	rdfs:subClassOf sch:Beach;
+	rdfs:label "Partly Organized".
+stkg:Non_Organized a rdfs:Class;
+	rdfs:subClassOf sch:Beach;
+	rdfs:label "Non Organized".
+
+sch:TouristAttraction a rdfs:Class;
+	rdfs:label "Tourist Attraction".		
+stkg:Natural_Attraction a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Natural Attraction".
+stkg:Archaeological_Site a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Archaeological Site".
+stkg:Castle a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Castle".
+stkg:Museum a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Museum".
+stkg:Place_of_Worship a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Place of Worship".
+stkg:Winery a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Winery".
+stkg:Landmark a rdfs:Class;
+	rdfs:subClassOf sch:TouristAttraction;
+	rdfs:label "Landmark".
+	
+	
+sch:MedicalOrganization a rdfs:Class;
+	rdfs:label "Medical Organization".
+sch:Hospital a rdfs:Class;
+	rdfs:subClassOf sch:MedicalOrganization;
+	rdfs:label "Hospital".
+stkg:Medical_Center a rdfs:Class;
+	rdfs:subClassOf sch:MedicalOrganization;
+	rdfs:label "Medical Center".
+
+
+stkg:Information a rdfs:Class;
+	rdfs:label "Information".
+stkg:Legal_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "Legal Info".
+stkg:Driving_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "Driving Info".	
+stkg:Financial_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "Financial Info".	
+stkg:Religious_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "Religious Info".
+stkg:Medical_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "Medical Info".
+stkg:General_Info a rdfs:Class;
+	rdfs:subClassOf stkg:Information;
+	rdfs:label "General Info".
+	
+	
+#Properties
+
+stkg:Also_Known_As a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:range sch:Place ;
+	rdfs:label "Also Known As".
+	
+stkg:answer a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain stkg:Legal_Info, stkg:Driving_Info, stkg:Financial_Info, stkg:Religious_Info, stkg:Medical_Info, stkg:General_Info ;
+	rdfs:label "answer".
+	
+stkg:Blue_Flag a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Beach ;
+	rdfs:label "Blue Flag".
+	
+stkg:Brief_History a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:label "Brief History".
+	
+stkg:Covid_Protocols a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:label "Covid Protocols".
+	
+stkg:Do a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place, stkg:Village, sch:Beach ;
+	rdfs:range stkg:Activity ;
+	rdfs:label "Do".
+	
+stkg:during a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Festival ;
+	rdfs:label "during".
+	
+stkg:Get_Around a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:range stkg:Transportation ;
+	rdfs:label "Get Around".
+	
+stkg:Healthcare a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain stkg:Village ;
+	rdfs:range sch:Hospital, stkg:Medical_Center ;
+	rdfs:label "Healthcare".	
+	
+stkg:Island_Formation a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:label "Island Formation".	
+	
+stkg:Myths a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:range stkg:Myth ;
+	rdfs:label "Myths".	
+	
+stkg:Name_Origin a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place ;
+	rdfs:label "Name Origin".	
+	
+stkg:SandType a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Beach ;
+	rdfs:range stkg:Sand ;
+	rdfs:label "Sand Type".	
+
+stkg:See a rdf:Property;
+	rdfs:comment "" ;
+	rdfs:domain sch:Place, stkg:Village;
+	rdfs:range sch:TouristAttraction ;
+	rdfs:label "See".
+	
+stkg:Useful_Information a rdf:Property;
+	rdfs:comment "";
+	rdfs:domain sch:Place, stkg:Village, stkg:LocalWine, stkg:Transportation, stkg:Activity ;
+	rdfs:range stkg:Legal_Info, stkg:Driving_Info, stkg:Financial_Info, stkg:Religious_Info, stkg:Medical_Info, stkg:General_Info ;
+	rdfs:label "Useful Information".
+	
+stkg:Visit a rdf:Property;
+	rdfs:comment "";
+	rdfs:domain stkg:Village;
+	rdfs:range sch:Beach;
+	rdfs:label "Visit".
+	
+stkg:weather a rdf:Property;
+	rdfs:comment "";
+	rdfs:domain sch:Place;
+	rdfs:range stkg:Climate;
+	rdfs:label "weather".

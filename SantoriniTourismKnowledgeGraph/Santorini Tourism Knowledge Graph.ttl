@@ -1,0 +1,1047 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix sch: <https://schema.org/> .
+@prefix stkg: <http://santorinitourismkg.com/vocab/> .
+@prefix dbp:	<http://dbpedia.org/property/> .
+
+
+
+@prefix obj: <http://SantoriniTourismKG/genObj#> .
+@prefix places: <http://SantoriniTourismKG/Places#> .
+@prefix people: <http://SantoriniTourismKG/People#> .
+@prefix attr: <http://SantoriniTourismKG/Attractions#> .
+@prefix activ: <http://SantoriniTourismKG/Activities#> .
+
+
+
+
+
+#The main node 'Santorini'
+
+places:Santorini sch:name "Santorini"@en ;
+	a sch:Place;	
+	
+	stkg:Get_Around obj:Taxi, obj:Rental_Car, obj:Boat, obj:Bus, obj:Bicycle, obj:By_Foot;
+	
+	sch:EatAction obj:Brantada, obj:Koskosela, obj:Santorinio, obj:Sfougato, obj:Tsounisti, obj:Melitinia, obj:Santorini_Tomatoes, obj:Santorini_fava, obj:white_eggplants,
+	obj:Katsoúni, obj:Tomatokeftedes, obj:Saganaki, obj:Fava_me_Koukia, obj:Greek_Salad, obj:Roasted_Greek_lamb, obj:Moussaka, obj:Spanakopita, obj:Souvlaki_and_Gyros;
+	
+	sch:DrinkAction obj:Assyrtiko, obj:Aidani, obj:Athiri, obj:Vinsanto, obj:Mavrotragano ;
+	
+	stkg:Name_Origin "For many years, it was thought that Santorini was given its name by the Venetians in the 13th century at the time of the Crusades and the fall of Constantinople in 1204. It is a reference to Saint Irene - 'Santa Irini' (from the Greek word 'ei - ri - ni ' = peace). The Venetians had a landing place at Riva on the island of Thirassia, where they erected a chapel in honour of Santa Irini (Saint Irene), who had become a martyr in Thessaloniki on the 23rd March in the year 303. Nowadays there is strong evidence that the Basilica of Agia Irini at the base of the mountain of Mesa Vouno gave Santorini its name, and not the chapel of Santa Irini in Thirassia." ;
+	stkg:Also_Known_As places:Thira, places:Kalliste, places:Strongili;
+	stkg:Island_Formation obj:Island_GeoFormation;
+	stkg:Brief_History "https://www.santorini.com/santorini/history.html" ;
+	stkg:Myths obj:Atlantis;
+	
+	sch:birthPlace people:Aristeidis_Alafouzos, people:Juljan_Shehu, people:Giannis_Alafouzos, people:Spyros_Markezinis ;
+	sch:deathPlace people:Herbert_Kleber, people:Spyridon_Marinatos, people:Dionisio_de_Avila, people:Rodrigo_de_Beniambras, people:Acenario_López, people:Santiago_Calatayud ;
+	
+	stkg:Covid_Protocols "https://travel.gov.gr/#/" ;
+	
+	dbp:popMunicipality	15550 ;
+	dbp:areaMunicipality	90.689999999999997726 ;
+	stkg:weather obj:JanWeather, obj:FebWeather, obj:MarWeather, obj:AprWeather, obj:MayWeather, obj:JunWeather, obj:JulWeather, obj:AugWeather, obj:SepWeather, obj:OctWeather, obj:NovWeather, obj:DecWeather ;
+		
+	stkg:Useful_Information obj:Drinking_Age, obj:Cash_Card, obj:ATMs, obj:Currency, obj:Tipping, obj:Religion, obj:Tap_Water, obj:Electrical_Plug, obj:Spoken_Languages;
+		
+	sch:containsPlace places:Akrotiri, places:Ammoudi, places:Athinios, places:Emporio,
+	places:Finikia, places:Fira, places:Firostefani, places:Imerovigli, places:Kamari, places:Karterados, places:Messaria,
+	places:Monolithos, places:MesaGonia, places:Megalochori, places:Oia, places:Paradisos, places:Perissa, places:Perivolos, places:Pyrgos, places:Vothonas, places:Vourvoulos, places:ExoGonia;
+	
+	stkg:See attr:Santorini_Volcano, attr:Thirassia_Island;
+
+	stkg:Do activ:Winery_Wine_Tasting_Tour, activ:Helicopter_Tour, activ:Bicycle_Tour, activ:Photography_Tour, activ:Day_Boat_Tour, activ:Sunset_Boat_Tour, activ:Sunset_Catamaran_Tour, activ:Walking_Tour, 
+	activ:The_Ifestia_Festival, activ:Mule_Donkey_Riding, activ:Horseback_Riding, activ:ATV_Quad_Ride, activ:Cable_Car_Ride, activ:Fishing_Trip, activ:Cooking_Class_Workshop, activ:PhotoShooting, activ:Hiking.
+
+	
+
+
+#Villages
+
+places:Akrotiri sch:name "Akrotiri" ;
+	a stkg:Romantic_Place ;
+	stkg:Visit places:Red_Beach, places:MesaPigadia_Beach, places:White_Beach, places:Caldera_Beach, places:Almyra_Beach ;
+	stkg:See attr:Akrotíri_Archaeological_Site, attr:Akrotiri_Castle, attr:Akrotiri_Lighthouse;
+	a stkg:Village .
+	
+places:Ammoudi sch:name "Ammoudi" ;
+	stkg:Visit places:Ammoudi_Bay ;
+	stkg:See attr:Ammoudi_ThermalSprings;
+	a stkg:Village .
+	
+places:Athinios sch:name "Athinios" ;
+	a stkg:Village .
+	
+places:Emporio sch:name "Emporio" ;
+	stkg:healthcare places:Emporio_RMC ;
+	stkg:See attr:Emporio_Castle, attr:TomatoIndustrial_M, attr:ProphetElias_Hamilos;
+	a stkg:Village .
+	
+places:Finikia sch:name "Finikia" ;
+	a stkg:Village .
+	
+places:Fira sch:name "Fira" ;
+	stkg:Do activ:The_Festival_of_Megaron_Gyzi, activ:The_International_Music_Festival;
+	stkg:See attr:Caldera, attr:Folklore_M, attr:ArchaeologicalMuseum_Thera, attr:PrehistoricThera_M, attr:Megaron_Gyzi, attr:Cathedral_StJohntheBaptist, attr:StJohnTheologian, attr:AgiosMinas, attr:OrthodoxMetropolitanCathedral, attr:ThreeΒells, attr:Dominican_Convent, attr:AgiosStylianos, attr:Anhydrous_Winery;
+	stkg:Useful_Information obj:Fira_Banks;
+	a stkg:Village .
+	
+places:Firostefani sch:name "Firostefani" ;
+	stkg:See attr:AgiosNikolaos_Monastery;
+	a stkg:Village .
+	
+places:Imerovigli sch:name "Imerovigli" ;
+	a stkg:Romantic_Place ;
+	stkg:Visit places:Pori_Beach ;
+	stkg:See attr:Skaros_Rock, attr:Skaros_Castle, attr:PanagiaTheoskepasti, attr:AgiosIoannis, attr:BlueDomeAnastaseos, attr:AgiosGeorgios; 
+	a stkg:Village .
+	
+places:Kamari sch:name "Kamari" ;
+	a stkg:FamilyFriendly_Place ;
+	stkg:Visit places:Kamari_Beach, places:Avis_Beach, places:Monolithos_Beach ;
+	stkg:Do activ:Santorini_Film_Festival, activ:The_Santorini_Jazz_Festival;
+	stkg:See attr:Ancient_Thera, attr:Wine_M, attr:Gaia_Winery;
+	stkg:healthcare places:Kamari_RMC ;
+	stkg:Useful_Information obj:G_N_Bank;
+	a stkg:Village .
+	
+places:Karterados sch:name "Karterados" ;
+	stkg:healthcare places:Thera_Hospital ;
+	stkg:Visit places:Karterados_Beach ;
+	a stkg:Village .
+	
+places:Messaria sch:name "Messaria" ;
+	stkg:healthcare places:Messaria_RMC ;
+	a stkg:Village .
+	
+places:Monolithos sch:name "Monolithos" ;
+	a stkg:Village .
+	
+places:Megalochori sch:name "Megalochori" ;
+	stkg:See attr:Heart_Santorini, attr:Lost_Atlantis_Museum, attr:TheBoutari_Winery, attr:Gavalas_Winery;
+	a stkg:Village .
+	
+places:MesaGonia sch:name "Mesa Gonia" ;
+	stkg:See attr:PanagiaEpiskopi;
+	a stkg:Village .
+	
+places:ExoGonia sch:name "Exo Gonia" ;
+	stkg:See attr:ArgyrosEstate_Winery, attr:ArtemisKaramolegos_Winery;
+	a stkg:Village .	
+
+places:Oia sch:name "Oia" ;
+	a stkg:Romantic_Place, stkg:Picturesque ;
+	stkg:Visit places:Columbo_Beach, places:Armeni_Beach ;
+	stkg:Do activ:Sunset_Oia_Village_Tour, activ:Paddleboarding;
+	stkg:See attr:Sunset_Oia, attr:AgiosNikolaos_Castle, attr:NavalMaritime_M, attr:AgiosNikolaos, attr:AgiosIoannis_yellowChapel, attr:OiaBlueDome_Churches, attr:3Dome_church, attr:DomaineSigalas_winery, attr:Windmill;
+	stkg:healthcare places:Oia_RMC ;
+	stkg:Useful_Information obj:Alpha_Bank;
+	a stkg:Village .
+	
+places:Paradisos sch:name "Paradisos" ;
+	stkg:Visit places:Baxedes_Beach ;
+	a stkg:Village .
+	
+places:Perissa sch:name "Perissa" ;
+	stkg:Visit places:Perissa_Beach ;
+	stkg:See attr:Minerals_Fossils_M, attr:PanagiaKatefiani, attr:Church_HolyCross;
+	a stkg:Village .
+	
+places:Perivolos sch:name "Perivolos" ;
+	stkg:Visit places:Perivolos_Beach, places:Vlychada_Beach, places:AgiosGeorgios_Beach ;
+	a stkg:Village .
+	
+places:Pyrgos sch:name "Pyrgos" ;
+	a stkg:Romantic_Place ;
+	stkg:See attr:Santo_Wines, attr:HolyTrinity, attr:ProphetElias_Monastery, attr:Folklore_Ecclesiastical_M, attr:Icons_EcclesiasticalRelics_M, attr:Pyrgos_Castle;
+	stkg:healthcare places:Pyrgos_RMC ;
+	a stkg:Village .
+	
+places:Vothonas sch:name "Vothonas" ;
+	a stkg:Village .
+	
+places:Vourvoulos sch:name "Vourvoulos" ;
+	a stkg:Picturesque ;
+	stkg:Visit places:Vourvoulos_Beach ;
+	stkg:See attr:Vassaltis_Vineyards;
+	a stkg:Village .
+
+
+
+#Myths
+
+obj:Atlantis a stkg:Myth ;
+	sch:name "Lost City of Atlantis" ;
+	rdfs:seeAlso attr:Lost_Atlantis_Museum ;
+	sch:description "Santorini has often been connected with Atlantis, the legendary continent that plunged to the bottom of the sea while it was at its zenith. The mystery surrounding the destruction of the one, and the disappearance of the other has preoccupied scientists for generations. The starting points for the debate about Atlantis are the references to be found in Plato's dialogues 'Timaeus' (21E-25D) and 'Critias' (108E-121C). According to the account given in the former, Athenian lawyer Solon visited Egypt (590 BC) where he was told the story of Atlantis by a priest at Sais: 'a great and wonderful state which ruled over the other islands' which owed its power to the civilization that had evolved there. The kingdom consisted of two islands, the 'larger' and the 'smaller', and there were ten cities. Of these only two were mentioned specifically, the 'Metropolis' and the 'Royal City'. The people of Atlantis launched an attack on Athens 900 years before Solon had talked to the priest. But the Athenians defeated them and liberated all the lands that Atlantis had conquered. Later Atlantis suffered a terrible earthquake and a flood, sinking in its entirety into the sea. Finds from the excavations at Akrotiri have led scholars to conclude that the lost Atlantis was none other than Santorini. However over the centuries, as myth was retold, experts beg to differ. Professor Marinatos identified Atlantis with Minoan Crete. Perhaps Crete was the 'larger' island, the 'Royal City', while Santorini, with which Crete had ties, would have been the 'Metropolis' or 'smaller' island. The question still remains: was there such a place as Atlantis?".
+	
+obj:Island_GeoFormation sch:name "Island Geological Formation" ;
+	rdfs:seeAlso attr:Santorini_Volcano ;
+	sch:description "Scientists are of the opinion that about two million years ago, volcanoes located underneath the Aegean Sea to the west of Santorini began generating volcanic emissions that resulted in the formation of numerous small islands and ultimately there came into being two colossal shield volcanoes, which are nothing but conically shaped mountains. These conical mountains got amalgamated with the non-volcanic islands to make way for one large-sized island, which is Santorini. Although there is absolutely no trace of these mountains in the present times, geological scientists have appropriately named them. The mountain to the north was named as Mount Peristeria, while the one located to the south was named Mount Thera. Geologists are of the opinion that 200,000 years ago Mount Thera began to release immeasurable quantities of volcanic emission and they got deposited in the form of a chamber under Mount Thera. So massive were the eruptions that the mountain was unable to sustain itself and it collapsed downwards into the vacant volcanic chamber, thereby forming a caldera, which is nothing but an extensive yawning hole at the basement. This explosive phenomenon of Santorini volcano has been occurring continuously for the next 200,000 years and each time an explosion occurred, it would further deepen the caldera, which ultimately shaped the island of Santorini as it is today. The island of Santorini is made up of the following islands: the main island Thera, Therasia, Aspronisi, Palea Kameni and the island of Nea Kameni (or the volcano as it called by the locals). The volcanic zone of Santorini is the most dynamic volcanic zone in the South Aegean Volcanic Arc. The volcanic arc of Santorini is approximately 500 km long and it extends all the way from the Greek mainland to the Turkish Bodrum peninsula. The Santorini Volcanic Arch is exemplified by seismic activity at depths ranging between 150-170 km, which also happens to be the point where the African Plate is positioned beneath the Eurasian plate." .	
+	
+	
+#LocalCuisine
+
+obj:Brantada a stkg:LocalCuisine ;
+	sch:name "Brantada";
+	sch:description "Traditional fish recipe / food".
+obj:Koskosela a stkg:LocalCuisine ;
+	sch:name "Koskosela";
+	sch:description "Local Strapatsada - recipe / food".
+obj:Santorinio a stkg:LocalCuisine ;
+	sch:name "Santorinio";
+	sch:description "Traditional speciality only in Santorini".
+obj:Sfougato a stkg:LocalCuisine ;
+	sch:name "Sfougato";
+	sch:description "Traditional Meat Custard recipe / food".
+obj:Tsounisti a stkg:LocalCuisine ;
+	sch:name "Tsounisti";
+	sch:description "Manestra - local specialty recipe / food".
+obj:Melitinia a stkg:LocalCuisine ;
+	sch:name "Melitinia";
+	sch:description "Dessert - local specialty recipe / food".
+obj:Santorini_Tomatoes a stkg:LocalCuisine ;
+	sch:name "Santorini Tomatoes";
+	sch:description "Cherry tomatoes".
+obj:Santorini_fava a stkg:LocalCuisine ;
+	sch:name "Santorini Fava";
+	sch:description "Yellow split peas".
+obj:white_eggplants a stkg:LocalCuisine ;
+	sch:name "White Eggplants";
+	sch:description "Santorini’s white aubergine is usually sweeter and juicier than other eggplants. This is due to the particular features of the local volcanic soil where the plants grow".
+obj:Katsoúni a stkg:LocalCuisine ;
+	sch:name "Katsoúni";
+	sch:description "It is a type of a very tasty cucumber".
+obj:Tomatokeftedes a stkg:LocalCuisine ;
+	sch:name "Tomatokeftedes";
+	sch:description "Tomato Fritters".
+obj:Saganaki a stkg:LocalCuisine ;
+	sch:name "Saganaki";
+	sch:description "Fried cheese in filo pastry covered in honey".
+obj:Fava_me_Koukia a stkg:LocalCuisine ;
+	sch:name "Fava me Koukia";
+	sch:description "Mashed up fava beans".
+obj:Greek_Salad a stkg:LocalCuisine ;
+	sch:name "Greek Salad".
+obj:Roasted_Greek_lamb a stkg:LocalCuisine ;
+	sch:name "Roasted Greek lamb".
+obj:Moussaka a stkg:LocalCuisine ;
+	sch:name "Moussaka".
+obj:Spanakopita a stkg:LocalCuisine ;
+	sch:name "Spanakopita";
+	sch:description "Spinach Pie".
+obj:Souvlaki_and_Gyros a stkg:LocalCuisine ;
+	sch:name "Souvlaki and Gyros".
+	
+	
+#Local Wine
+
+obj:Assyrtiko a stkg:LocalWine ;
+	stkg:Useful_Information obj:Drinking_Age;
+	sch:name "Assyrtiko".
+obj:Aidani a stkg:LocalWine ;
+	stkg:Useful_Information obj:Drinking_Age;
+	sch:name "Aidani".
+obj:Athiri a stkg:LocalWine ;
+	stkg:Useful_Information obj:Drinking_Age;
+	sch:name "Athiri".
+obj:Vinsanto a stkg:LocalWine ;
+	stkg:Useful_Information obj:Drinking_Age;
+	sch:name "Vinsanto".
+obj:Mavrotragano a stkg:LocalWine ;
+	stkg:Useful_Information obj:Drinking_Age;
+	sch:name "Mavrotragano".
+
+
+#Transportation
+
+obj:Taxi a stkg:Transportation ;
+	sch:name "Taxi".
+obj:Rental_Car a stkg:Transportation ;
+	stkg:Useful_Information obj:RentalCar_License, obj:Drinking_Driving, obj:Parking, obj:Driving_Side ;
+	sch:name "Rental Car".
+obj:Boat a stkg:Transportation ;
+	sch:name "Boat".
+obj:Bus a stkg:Transportation ;
+	sch:name "Bus".
+obj:Bicycle a stkg:Transportation ;
+	stkg:Useful_Information obj:Bicycle_License ;
+	sch:name "Bicycle".
+obj:By_Foot a stkg:Transportation ;
+	sch:name "By Foot".
+	
+
+
+#Also Known As
+
+places:Thira a sch:Place ;
+	stkg:Name_Origin "The name Thera comes from the commander Theras, son of Autesion of Sparta, who, as Herodotus of Alikarnassos (484-424 BC) tells us, had lead earlier colonists to Kalliste. 'There were in the island now called Thera, but then Calliste, descendants of Menbliorus the son of Poeciles, a Phoenician; for Kadmus son of Agenor, in his search for Europa, had put in at the place now called Thera; and having put in, either because the land pleased him, or because for some other reason he desired to do so, he left in this island, among other Phoenicians, his own kinsman Membliarus. These dwelt in the island Kalliste for eight generations before Theras came from Lacedaemon'" ; 
+	stkg:Also_Known_As places:Santorini, places:Kalliste, places:Strongili;	
+	sch:name "Thira".
+places:Kalliste a sch:Place ;
+	stkg:Name_Origin "The name Kallisti or Kalliste (Καλλίστη) means 'The Fair One' or 'The Most Beautiful One'. Mythology tells us that on their homeward journey, Euphemos, the son of the god Poseidon, received a clod of white soil as a gift from Triton. After leaving Anafi, he received a warning in the form of a clap of thunder and threw the soil into the sea. From this was formed the island of Kalliste, the most fair, which was later called Thera.";
+	stkg:Also_Known_As places:Santorini, places:Thira, places:Strongili;	
+	sch:name "Kalliste".
+places:Strongili a sch:Place ;
+	stkg:Name_Origin "The first Volcanic craters began to form about 2,000,000 years ago southwest of where Profitis Ilias is today. Over time the craters broke through the sea and then united to form what is now Akrotiri. Later volcanic activity would create other craters to the north of the already existing island. The volcanic cones, and the rocky islet pre-dating them, slowly began to unite, due the volcanic matter spilling out during the eruptions. Eventually one island was formed. Herodotus tells us that the island’s first name came from that formation – 'Strongili' (Στρογγύλη) or 'The Round One', a name that dates back to 1500 BC";
+	stkg:Also_Known_As places:Santorini, places:Thira, places:Kalliste;
+	sch:name "Strongili".
+	
+	
+
+#Notable Person
+
+people:Aristeidis_Alafouzos a stkg:Notable_Person ;
+	sch:jobTitle "Businessman" ;
+	sch:name "Aristeidis Alafouzos".
+people:Juljan_Shehu a stkg:Notable_Person ;
+	sch:jobTitle "Professional Footballer" ;
+	sch:name "Juljan Shehu".
+people:Giannis_Alafouzos a stkg:Notable_Person ;
+	sch:jobTitle "Former President of Panathinaikos F.C." ;
+	sch:name "Giannis Alafouzos".
+people:Spyros_Markezinis a stkg:Notable_Person ;
+	sch:jobTitle "Politician" ;
+	sch:name "Spyros Markezinis".
+people:Herbert_Kleber a stkg:Notable_Person ;
+	sch:jobTitle "Psychiatrist and Substance Abuse Researcher." ;
+	sch:name "Herbert Kleber".
+people:Spyridon_Marinatos a stkg:Notable_Person ;
+	sch:jobTitle "Archaeologist" ;
+	sch:name "Spyridon Marinatos".
+people:Dionisio_de_Avila a stkg:Notable_Person ;
+	sch:jobTitle "Roman Catholic Prelate" ;
+	sch:name "Dionisio de Avila".
+people:Rodrigo_de_Beniambras a stkg:Notable_Person ;
+	sch:jobTitle "Roman Catholic Prelate" ;
+	sch:name "Rodrigo de Beniambras".
+people:Acenario_López a stkg:Notable_Person ;
+	sch:jobTitle "Roman Catholic Prelate" ;
+	sch:name "Acenario López".
+people:Santiago_Calatayud a stkg:Notable_Person ;
+	sch:jobTitle "Roman Catholic Prelate" ;
+	sch:name "Santiago Calatayud".
+
+
+
+
+#Activities
+
+#Tours
+activ:Winery_Wine_Tasting_Tour a stkg:Tour, stkg:Romantic_Activity, stkg:Activity ;
+	stkg:Useful_Information obj:Drinking_Age;
+	rdfs:seeAlso attr:DomaineSigalas_winery, attr:Santo_Wines, attr:Gaia_Winery, attr:ArgyrosEstate_Winery, attr:TheBoutari_Winery, attr:Vassaltis_Vineyards, attr:Anhydrous_Winery, attr:Gavalas_Winery, attr:ArtemisKaramolegos_Winery; 
+	sch:name "Winery/Wine Tasting Tour".
+activ:Helicopter_Tour a stkg:Tour, stkg:Activity ;
+	sch:name "Helicopter Tour".
+activ:Bicycle_Tour a stkg:Tour ;
+	sch:name "Bicycle Tour".
+activ:Photography_Tour a stkg:Tour, stkg:Activity ;
+	sch:name "Photography Tour".
+activ:Day_Boat_Tour a stkg:Tour, stkg:Activity ;
+	sch:name "Day Boat Tour".
+activ:Sunset_Boat_Tour a stkg:Tour, stkg:Activity;
+	a stkg:Romantic_Activity ;
+	sch:name "Sunset Boat Tour".
+activ:Sunset_Catamaran_Tour a stkg:Tour, stkg:Activity ;
+	a stkg:Romantic_Activity ;
+	sch:name "Sunset Catamaran Tour".
+activ:Walking_Tour a stkg:Tour, stkg:Activity ;
+	sch:name "Walking Tour".
+activ:Sunset_Oia_Village_Tour a stkg:Tour, stkg:Activity ;
+	a stkg:Romantic_Activity ;
+	sch:name "Sunset_Oia_Village_Tour".
+
+#Festivals
+activ:Santorini_Film_Festival a sch:Festival, stkg:Activity;
+	sch:description "The Santorini Film Festival is held annually at the open-air cinema, Cinema Kamari, in Santorini." ;
+	sch:name "Santorini Film Festival".
+activ:The_Festival_of_Megaron_Gyzi a sch:Festival, stkg:Activity ;
+	sch:description "The Festival of Megaron Gyzi takes place the first three weeks of August in Gyzi Cultural Centre in Fira. It includes various events, mostly musical concerts of jazz and classical music and art exhibitions." ;
+	stkg:during "First three weeks of August" ; 
+	sch:name "The Festival of Megaron Gyzi".
+activ:The_Santorini_Jazz_Festival a sch:Festival, stkg:Activity ;
+	sch:description "The Santorini Jazz Festival takes place in July, in the heart of the summer and attracts the lovers of Jazz music. Famous performers from the Greek or international scene will entertain you with their jazz rhythms.";
+	stkg:during "July" ;
+	sch:name "The Santorini Jazz Festival".
+activ:The_Ifestia_Festival a sch:Festival, stkg:Activity ;
+	stkg:during "August" ;
+	sch:description "The Ifestia Festival (meaning the Greek Volcano festival) is organized annually in Santorini, every August. It involves a representation of the eruption of the island's volcano with fireworks and a series of interesting events, concerts and dance performances.";
+	sch:name "The Ifestia Festival".
+activ:The_International_Music_Festival a sch:Festival, stkg:Activity ;
+	sch:description "The International Music Festival welcomes artists from the international music scene to perform for two weeks in Fira, during September.";
+	stkg:during "September" ;
+	sch:name "The International Music Festival".
+
+
+
+#Water Activities
+activ:HoverBoard a stkg:Water_Activity, stkg:Activity;
+	sch:name "Flyboard / Hoverboard".
+activ:Jet_Ski a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Jet Skiing".
+activ:Parasailing a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Parasailing".
+activ:StandUp_Paddle a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Stand up Paddle".
+activ:Jet_Boating a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Jet Boating".
+activ:Snorkeling a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Snorkeling".
+activ:Paddleboarding a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Paddleboarding".
+activ:Scuba_Diving a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Scuba Diving".
+activ:Sea_Kayaking a stkg:Water_Activity, stkg:Activity;
+	sch:name "Sea Kayaking".
+activ:Kitesurfing a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Kitesurfing".
+activ:Windsurfing a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Windsurfing".
+activ:Wakeboard a stkg:Water_Activity, stkg:Activity ;
+	sch:name "Wakeboard".
+
+
+
+#Rides
+activ:Mule_Donkey_Riding a stkg:Ride, stkg:Activity;
+	sch:name "Mule Donkey Riding".
+activ:Horseback_Riding a stkg:Ride, stkg:Activity;
+	a stkg:Romantic_Activity ;
+	sch:name "Horseback Riding".
+activ:ATV_Quad_Ride a stkg:Ride, stkg:Activity;
+	sch:name "ATV/Quad Ride".
+activ:Cable_Car_Ride a stkg:Ride, stkg:Activity;
+	sch:name "Cable Car Ride".
+
+#Alternative Activities
+activ:Fishing_Trip a stkg:Alternative_Activity, stkg:Activity ;
+	sch:name "Fishing Trip".
+activ:Cooking_Class_Workshop a stkg:Alternative_Activity, stkg:Activity ;
+	sch:name "Cooking Class/Workshop".
+activ:PhotoShooting a stkg:Alternative_Activity, stkg:Activity;
+	sch:name "PhotoShooting".
+activ:Hiking a stkg:Alternative_Activity, stkg:Activity ;
+	sch:name "Hiking".
+
+
+
+#Healthcare
+
+places:Thera_Hospital a sch:Hospital;
+	sch:name "General Hospital of Thera".
+places:Emporio_RMC a stkg:Medical_Center;
+	sch:name "Regional Medical Center of Emporio".
+places:Oia_RMC a stkg:Medical_Center;
+	sch:name "Regional Medical Center of Oia".
+places:Pyrgos_RMC a stkg:Medical_Center;
+	sch:name "Regional Medical Center of Pyrgos".
+places:Kamari_RMC a stkg:Medical_Center;
+	sch:name "Regional Medical Center of Kamari".
+places:Messaria_RMC a stkg:Medical_Center;
+	sch:name "Regional Medical Center of Messaria".
+	
+
+#Sand
+
+obj:Black_S_P a stkg:Sand;
+	sch:name "Black Sand and Pebbles".
+obj:Black_S a stkg:Sand;
+	sch:name "Black Sand".
+obj:Black_P a stkg:Sand;
+	sch:name "Black Pebbles".
+obj:Black_Red_VP a stkg:Sand;
+	sch:name "Black and Red Volcanic Pebbles".
+obj:DarkGrey_S a stkg:Sand;
+	sch:name "Dark Grey Sand".
+obj:Pebbled a stkg:Sand;
+	sch:name "Pebbled".
+
+
+#Coasts
+
+places:South_East_Coast a sch:Place;
+	sch:name "South East Coast".
+places:South_West_Coast a sch:Place;
+	sch:name "South West Coast".
+places:South_Coast a sch:Place;
+	sch:name "South Coast".
+places:East_Coast a sch:Place;
+	sch:name "East Coast".
+places:North_East_Coast a sch:Place;
+	sch:name "North East Coast".
+places:South_West_Coast a sch:Place;
+	sch:name "South West Coast".
+places:North_Coast a sch:Place;
+	sch:name "North Coast".
+
+
+
+
+#Beaches
+
+#Well_Organized
+places:Kamari_Beach a stkg:Well_Organized, sch:Beach;
+	a stkg:Famous, stkg:FamilyFriendly_Beach, stkg:Touristy ;
+	stkg:sandType obj:Black_S_P;
+	stkg:Blue_Flag true ;
+	sch:hasMap "https://goo.gl/maps/rDmV55joNpn4L4YGA" ;
+	sch:containedInPlace places:South_East_Coast ;
+	stkg:Do activ:Wakeboard;
+	sch:name "Kamari Beach".
+
+places:Perissa_Beach a stkg:Well_Organized, sch:Beach;
+	a stkg:Famous, stkg:FamilyFriendly_Beach, stkg:Touristy, stkg:Long, stkg:Romantic_Beach ;
+	stkg:sandType obj:Black_S_P;
+	stkg:Blue_Flag true ;
+	sch:hasMap "https://goo.gl/maps/C4AUYg8odB76ZExg6" ;
+	sch:containedInPlace places:South_East_Coast ;
+	sch:name "Perissa Beach".
+	
+places:Perivolos_Beach a stkg:Well_Organized, sch:Beach;
+	a stkg:Famous, stkg:Touristy, stkg:Long ;
+	stkg:sandType obj:Black_S;
+	stkg:Blue_Flag true ;
+	sch:hasMap "https://goo.gl/maps/69GNWGofDGPqXDxB6" ;
+	sch:containedInPlace places:South_East_Coast ;
+	stkg:Do activ:Jet_Ski, activ:Parasailing, activ:StandUp_Paddle, activ:HoverBoard, activ:Jet_Boating, activ:Snorkeling, activ:Paddleboarding;
+	sch:name "Perivolos  Beach".
+
+
+#Partly_Organized
+places:Red_Beach a stkg:Partly_Organized, sch:Beach;
+	a stkg:Famous, stkg:Small, stkg:Romantic_Beach ;
+	stkg:sandType obj:Black_Red_VP;
+	sch:hasMap "https://goo.gl/maps/Y3WcPj7fa7j7GRZw9" ;
+	sch:containedInPlace places:South_West_Coast ;
+	sch:name "Red Beach".
+	
+places:Vlychada_Beach a stkg:Partly_Organized, sch:Beach;
+	a stkg:Long, stkg:Quiet ;
+	stkg:sandType obj:DarkGrey_S ;
+	stkg:Blue_Flag true ;
+	sch:hasMap "https://goo.gl/maps/4997czm1syH9Vh9a6" ;
+	sch:containedInPlace places:South_Coast ;
+	sch:name "Vlychada Beach".
+
+places:AgiosGeorgios_Beach a stkg:Partly_Organized, sch:Beach;
+	a stkg:Quiet, stkg:Upscale ;
+	stkg:sandType obj:Black_S_P ;
+	stkg:Blue_Flag true ;
+	sch:hasMap "https://goo.gl/maps/LZHYAtkbERkkuLGa9" ;
+	sch:containedInPlace places:South_East_Coast ;
+	stkg:Do activ:HoverBoard, activ:Jet_Ski, activ:Parasailing, activ:StandUp_Paddle;
+	sch:name "Agios Georgios Beach".
+	
+places:MesaPigadia_Beach a stkg:Partly_Organized, sch:Beach;
+	a stkg:Quiet, stkg:Secluded ;
+	stkg:sandType obj:Black_P ;
+	sch:hasMap "https://goo.gl/maps/xDfMRV1fxAxnuPit8" ;
+	sch:containedInPlace places:South_West_Coast ;
+	sch:name "Mesa Pigadia Beach".
+	
+places:Avis_Beach a stkg:Partly_Organized, sch:Beach;
+	a stkg:Quiet ;
+	stkg:sandType obj:Black_S_P ;
+	sch:hasMap "https://goo.gl/maps/DvF5KdK2eXNfjHk1A" ;
+	sch:containedInPlace places:East_Coast ;
+	stkg:Do activ:Windsurfing;
+	sch:name "Avis Beach".
+
+
+#Non_Organized	
+places:Columbo_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Nudism_Friendly, stkg:Quiet, stkg:Secluded, stkg:Long;
+	stkg:sandType obj:Black_P ;
+	sch:hasMap "https://goo.gl/maps/Dwro6jqqTnUfi2VK9" ;
+	sch:containedInPlace places:North_East_Coast ;
+	sch:name "Columbo Beach".
+	
+places:Monolithos_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:FamilyFriendly_Beach, stkg:Quiet, stkg:Secluded, stkg:Long , stkg:Nudism_Friendly ;
+	stkg:sandType obj:Black_S ;
+	sch:hasMap "https://goo.gl/maps/epfPMfUh3CxRSDGBA" ;
+	sch:containedInPlace places:East_Coast ;
+	stkg:Do activ:Kitesurfing;
+	sch:name "Monolithos Beach".
+
+places:White_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Secluded, stkg:Quiet, stkg:Nudism_Friendly ;
+	stkg:sandType obj:Black_P ;
+	sch:hasMap "https://goo.gl/maps/ZreGNghti98G9KiH7" ;
+	sch:containedInPlace places:South_West_Coast ;
+	sch:name "White Beach".
+	
+places:Vourvoulos_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Secluded, stkg:Quiet ;
+	stkg:sandType obj:Black_P ;
+	sch:hasMap "https://goo.gl/maps/5SkgobyQmBjwTKrW8" ;
+	sch:containedInPlace places:East_Coast ;
+	sch:name "Vourvoulos Beach".
+	
+places:Baxedes_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:FamilyFriendly_Beach, stkg:Secluded, stkg:Nudism_Friendly, stkg:Long ;
+	stkg:sandType obj:Black_S_P;
+	sch:hasMap "https://goo.gl/maps/PGfrNNV2Zjdr28nQA" ;
+	sch:containedInPlace places:North_East_Coast ;
+	sch:name "Baxedes (Pаrаdisоs) Beach".
+	
+places:Armeni_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Small, stkg:Picturesque, stkg:Quiet ;
+	stkg:sandType obj:Pebbled ;
+	sch:hasMap "https://goo.gl/maps/1UsytjYF88XFQXVR8" ;
+	sch:containedInPlace places:North_Coast ;
+	sch:name "Armeni Beach".
+	
+places:Caldera_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Small, stkg:Quiet, stkg:Secluded ;
+	stkg:sandType obj:Black_S_P ;
+	sch:hasMap "https://goo.gl/maps/QJPijjn6Vod6JoJH8" ;
+	sch:containedInPlace places:South_West_Coast ;
+	stkg:Do activ:Scuba_Diving, activ:Sea_Kayaking;
+	sch:name "Caldera Beach".
+	
+places:Pori_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Quiet, stkg:Small, stkg:Secluded, stkg:FamilyFriendly_Beach ;
+	stkg:sandType obj:Black_S_P ;
+	sch:hasMap "https://goo.gl/maps/nVroVtd6Qikthojm7" ;
+	sch:containedInPlace places:North_East_Coast ;
+	sch:name "Pori Beach".
+	
+places:Karterados_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Secluded, stkg:Quiet ;
+	stkg:sandType obj:Black_S ;
+	sch:hasMap "https://goo.gl/maps/ArSgyk6KNStFoMaZ8" ;
+	sch:containedInPlace places:East_Coast ;
+	sch:name "Karterados Beach".
+	
+places:Ammoudi_Bay a stkg:Non_Organized, sch:Beach;
+	a stkg:Picturesque, stkg:Famous, stkg:Romantic_Place, stkg:Quiet ;
+	sch:hasMap "https://goo.gl/maps/KDbETEzyo7bBN2YU9" ;
+	sch:containedInPlace places:North_Coast ;
+	sch:name "Ammoudi Bay".
+	
+places:Almyra_Beach a stkg:Non_Organized, sch:Beach;
+	a stkg:Picturesque, stkg:Small, stkg:Secluded, stkg:Quiet ;
+	stkg:sandType obj:Black_P ;
+	sch:hasMap "https://goo.gl/maps/VNDbkv9ZhxmnT2PJ6" ;
+	sch:containedInPlace places:South_Coast ;
+	sch:name "Almyra Beach".
+
+
+
+
+
+#Tourist Attractions
+
+
+#Natural_Attraction
+attr:Santorini_Volcano a stkg:Picturesque;
+	a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:url "https://www.santorini.com/santorinivolcano/ ";
+	rdfs:seeAlso obj:Island_GeoFormation;
+	stkg:See attr:Hot_Springs;
+	sch:name "Santorini Volcano".
+
+attr:Thirassia_Island a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Thirassia Island".
+	
+attr:Hot_Springs a stkg:Picturesque, stkg:Romantic_Attraction ;
+	a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Hot Springs".
+
+attr:Caldera a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Caldera".
+
+attr:Sunset_Oia a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Sunset in Oia".
+
+attr:Skaros_Rock a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Skaros Rock".
+
+attr:Ammoudi_ThermalSprings a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:name "Ammoudi Thermal Springs".	
+
+attr:Heart_Santorini a stkg:Natural_Attraction, sch:TouristAttraction ;
+	sch:url "https://www.greeka.com/cyclades/santorini/sightseeing/santorini-heart/";
+	sch:name "Heart of Santorini".	
+
+
+#Archaeological_Site
+attr:Ancient_Thera a stkg:Archaeological_Site, sch:TouristAttraction ;
+	sch:name "Ancient Thera".	
+
+attr:Akrotíri_Archaeological_Site a stkg:Archaeological_Site, sch:TouristAttraction ;
+	sch:name "Akrotíri Archaeological Site".	
+
+
+
+#Castle
+attr:AgiosNikolaos_Castle a stkg:Castle, sch:TouristAttraction ;
+	sch:name "The castle of Agios Nikolaos".	
+	
+attr:Skaros_Castle a stkg:Castle, sch:TouristAttraction ;
+	sch:name "The castle of Skaros".	
+	
+attr:Pyrgos_Castle a stkg:Castle, sch:TouristAttraction ;
+	sch:name "The castle of Pyrgos".	
+	
+attr:Akrotiri_Castle a stkg:Castle, sch:TouristAttraction ;
+	sch:name "The castle of Akrotiri".	
+	
+attr:Emporio_Castle a stkg:Castle, sch:TouristAttraction ;
+	sch:name "The castle of Emporio".	
+
+
+
+#Museum
+attr:NavalMaritime_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Naval Maritime Museum".
+	
+attr:Folklore_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Folklore Museum of Emmanuel A. Lignos".
+	
+attr:ArchaeologicalMuseum_Thera a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Archaeological Museum of Thera".
+	
+attr:PrehistoricThera_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Prehistoric Thera Museum".
+	
+attr:Wine_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Wine Museum".
+	
+attr:Icons_EcclesiasticalRelics_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Museum of Icons and Ecclesiastical Relics".
+	
+attr:Folklore_Ecclesiastical_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Folklore and Ecclesiastical Museum".
+	
+attr:Lost_Atlantis_Museum a stkg:Museum, sch:TouristAttraction ;
+	rdfs:seeAlso obj:Atlantis ;
+	sch:name "Lost Atlantis Museum".
+
+attr:Minerals_Fossils_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Minerals and Fossils Museum".
+
+attr:TomatoIndustrial_M a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Tomato Industrial Museum".
+
+attr:Megaron_Gyzi a stkg:Museum, sch:TouristAttraction ;
+	sch:name "Megaron Gyzi".
+
+
+
+
+#Place_of_Worship
+attr:AgiosNikolaos a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Nikolaos Church".
+
+attr:Cathedral_StJohntheBaptist a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Catholic Cathedral of Saint John the Baptist".
+
+attr:StJohnTheologian a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Church of St. John the Theologian".
+
+attr:AgiosMinas a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Church of Agios Minas".
+
+attr:PanagiaKatefiani a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Ekklisia Panagia Katefiani".
+
+attr:OrthodoxMetropolitanCathedral  a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Orthodox Metropolitan Cathedral ".
+
+attr:PanagiaEpiskopi a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Panagia Episkopi".
+
+attr:PanagiaTheoskepasti a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Panagia Theoskepasti Chapel".
+
+attr:ProphetElias_Monastery a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Prophet Elias Monastery".
+
+attr:ThreeΒells a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Three bells Catholic Church".
+
+attr:AgiosIoannis a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Ioannis Chapel".
+
+attr:BlueDomeAnastaseos a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Blue Dome Anastaseos Church".
+
+attr:AgiosNikolaos_Monastery a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Nikolaos Monastery".
+
+attr:HolyTrinity a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Holy Trinity Church".
+
+attr:Dominican_Convent a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Dominican Convent".
+
+attr:AgiosGeorgios a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Georgios Chapel".
+
+attr:AgiosIoannis_yellowChapel a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Ioannis yellow chapel".
+
+attr:OiaBlueDome_Churches a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Oia Blue Dome Churches".
+
+attr:3Dome_church a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "3 Dome church".
+
+attr:AgiosStylianos a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Agios Stylianos Catholic Church".
+
+attr:Church_HolyCross a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Church of Holy Cross".
+	
+attr:ProphetElias_Hamilos a stkg:Place_of_Worship, sch:TouristAttraction ;
+	sch:name "Prophet Elias Hamilos".
+	
+
+
+#Winery
+attr:DomaineSigalas_winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Domaine Sigalas winery".
+	
+attr:Santo_Wines a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Santo Wines".
+
+attr:Gaia_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Gaia Winery Santorini".
+
+attr:ArgyrosEstate_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Argyros Estate Winery".
+
+attr:TheBoutari_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "The Boutari Winery".
+
+attr:Vassaltis_Vineyards a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Vassaltis Vineyards".
+
+attr:Anhydrous_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Anhydrous Winery".
+	
+attr:Gavalas_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Gavalas Winery".
+
+attr:ArtemisKaramolegos_Winery a stkg:Winery, sch:TouristAttraction ;
+	sch:name "Artemis Karamolegos Winery".
+
+
+
+#Landmark
+attr:Akrotiri_Lighthouse a stkg:Landmark, sch:TouristAttraction ;
+	sch:name "Akrotiri Lighthouse".
+
+attr:Windmill a stkg:Landmark, sch:TouristAttraction ;
+	sch:name "Windmil".
+
+
+
+
+
+#Climate
+
+obj:JanWeather a stkg:Climate;
+	dbp:janLowC	10 ;
+	dbp:janHighC 14 ;
+	dbp:janPrecipitationDays 10 ;
+	dbp:janMeanC 12 ;
+	dbp:jandSun	7 ;
+	sch:name "January Weather".
+obj:FebWeather a stkg:Climate;
+	dbp:febPrecipitationDays 9 ;
+	dbp:febHighC 14 ;
+	dbp:febLowC	10 ;
+	dbp:febMeanC 12 ;
+	dbp:febdSun	7 ;
+	sch:name "February Weather".
+obj:MarWeather a stkg:Climate;
+	dbp:marPrecipitationDays 7 ;
+	dbp:marLowC	11 ;
+	dbp:marHighC 16;
+	dbp:marMeanC 14 ;
+	dbp:mardSun	9 ;
+	sch:name "March Weather".
+obj:AprWeather a stkg:Climate;
+	dbp:aprPrecipitationDays 4 ;
+	dbp:aprLowC	13 ;
+	dbp:aprHighC 18 ;
+	dbp:aprMeanC 16 ;
+	dbp:aprdSun	11 ;
+	sch:name "April Weather".
+obj:MayWeather a stkg:Climate;
+	dbp:mayPrecipitationDays 3 ;
+	dbp:mayLowC	17 ;
+	dbp:mayHighC 23 ;
+	dbp:mayMeanC 20 ;
+	dbp:maydSun	12 ;
+	sch:name "May Weather".
+obj:JunWeather a stkg:Climate;
+	dbp:junPrecipitationDays 0 ;
+	dbp:junLowC	21 ;
+	dbp:junHighC 27 ;
+	dbp:junMeanC 24 ;
+	dbp:jundSun	13 ;
+	sch:name "June Weather".
+obj:JulWeather a stkg:Climate;
+	dbp:julPrecipitationDays 1 ;
+	dbp:julHighC 29 ;
+	dbp:julLowC	23 ;
+	dbp:julMeanC 26 ;
+	dbp:juldSun	14 ;
+	sch:name "July Weather".
+obj:AugWeather a stkg:Climate;
+	dbp:augPrecipitationDays 0 ;
+	dbp:augLowC	23 ;
+	dbp:augHighC 29 ;
+	dbp:augMeanC 26 ;
+	dbp:augdSun	13 ;
+	sch:name "August Weather".
+obj:SepWeather a stkg:Climate;
+	dbp:sepPrecipitationDays 2 ;
+	dbp:sepLowC	21 ;
+	dbp:sepHighC 26 ;
+	dbp:sepMeanC 24 ;
+	dbp:sepdSun	11 ;
+	sch:name "September Weather".
+obj:OctWeather a stkg:Climate;
+	dbp:octPrecipitationDays 4 ;
+	dbp:octLowC	18 ;
+	dbp:octHighC 23 ;
+	dbp:octMeanC 21 ;
+	dbp:octdSun	9 ;
+	sch:name "October Weather".
+obj:NovWeather a stkg:Climate;
+	dbp:novPrecipitationDays 8 ;
+	dbp:novHighC 19 ;
+	dbp:novLowC	14 ;
+	dbp:novMeanC 17 ;
+	dbp:novdSun	8 ;
+	sch:name "November Weather".
+obj:DecWeather a stkg:Climate;
+	dbp:decPrecipitationDays 11 ;
+	dbp:decHighC 15 ;
+	dbp:decLowC	11 ;
+	dbp:decMeanC 13 ;
+	dbp:decMeanC 13 ;
+	sch:name "December Weather".
+
+
+
+
+#Information
+
+#Legal_Info
+obj:Drinking_Age a stkg:Legal_Info;
+	stkg:answer obj:Eighteen_Years_Old;
+	sch:name "Drinking Age".
+
+obj:Eighteen_Years_Old sch:name "18 years old";
+	sch:description "There is no legal drinking age in Greece if you are drinking in private. However, if you want to purchase alcohol and drink in public, you must be 18 years of age. That’s the law, at least, although it isn’t always strictly enforced." .
+	
+
+#Driving_Info
+obj:RentalCar_License a stkg:Driving_Info;
+	stkg:answer obj:Int_Nat_DL;
+	sch:name "Rental Car License".
+	
+obj:Int_Nat_DL sch:name "International or National driver's license";
+	sch:description "To rent a car in Santorini you need an international or national driver's license, held by the driver for at least 1 year. The minimum driver's age is 21 years for cars and jeeps. We advise you pay the extra for Collision Damage Waiver (CDW). It's worth the money." .
+	
+obj:Bicycle_License a stkg:Driving_Info;
+	sch:description "If the customers come from a country-member of the European Union (exempt is Greece), a moped driving license valid in their country is sufficient. For customers coming from countries outside the European Union, an international moped driving license is compulsory. Crash helmets are compulsory" ;
+	sch:name "Bicycle License".
+
+obj:Drinking_Driving a stkg:Driving_Info;
+	sch:description "Drinking and Driving is frowned upon with harsh penalties be you four wheeled or two. Alcotests / police blocks are a regular thing all year round, especially in the summer season on Saturday nights. Seat belts are compulsory." ;
+	sch:name "Drinking and Driving".	
+
+obj:Parking a stkg:Driving_Info;
+	sch:description "The main roads only have 2 lane traffic, and within the villages, the roads are very narrow. Fira the capital and other prominent villages on the island have free public parking areas. Use them to avoid traffic congestion and parking fines." ;
+	sch:name "Parking".	
+	
+obj:Driving_Side a stkg:Driving_Info;
+	stkg:answer obj:RightHand_Side;
+	sch:name "Driving Side".
+	
+obj:RightHand_Side sch:name "Right Hand Side of the Road";
+	sch:description "When driving in Greece you must drive on the right hand side of the road." .
+		
+	
+#Financial_Info
+obj:Cash_Card a stkg:Financial_Info;
+	stkg:answer obj:Card;
+	sch:name "Cash or Card".
+	
+obj:Card sch:name "Credit or Debit Card" ;
+	sch:description "90% of the times your credit or debit card will be accepted at the business you are paying but cash is always the best way to pay in Greece and in Santorini. You should always have some cash with you while in Santorini".	
+	
+obj:Fira_Banks a stkg:Financial_Info;
+	sch:description "Most banks on Santorini are located in Fira around the main square.";
+	sch:name "Fira Banks".
+	
+obj:G_N_Bank a stkg:Financial_Info;
+	sch:description "There is a Greece National Bank office in Kamari." ;
+	sch:name "Greece National Bank".
+	
+obj:Alpha_Bank a stkg:Financial_Info;
+	sch:description "There is an Alpha Bank office in Oia." ;
+	sch:name "Alpha Bank".
+	
+obj:ATMs a stkg:Financial_Info;
+	sch:description "Cash machines (ATM's) are common and can be found not only at Santorini banks, but in most villages around the island." ;
+	sch:name "Cash machines (ATM's)".
+
+obj:Currency a stkg:Financial_Info;
+	stkg:answer obj:Euro;
+	sch:name "Currency of Greece".
+	
+obj:Euro sch:name "Euro (€)";
+	sch:description "The local currency on Santorini is the Euro (€) (Greeks pronounce it 'evro')".
+
+obj:Tipping a stkg:Financial_Info;
+	stkg:answer obj:Optional;
+	sch:name "Tipping".
+	
+obj:Optional sch:name "Optional";
+	sch:description "Tipping in Santorini, as well as in the rest of Greece is optional. Many cafes, restaurants, bars & clubs don't include tips for the staff on the bill, so anything extra you feel you would like to leave is much appreciated.".
+	
+#Religious_Info
+obj:Religion a stkg:Religious_Info;
+	stkg:answer obj:Christianity;
+	sch:name "Religion".
+	
+obj:Christianity sch:name "Christianity";
+	sch:description "Religion in Greece is dominated by Christianity, in particular the Greek Orthodox Church, which is within the larger communion of the Eastern Orthodox Church. It represented 90% of the total population in 2015[1] and is constitutionally recognized as the 'prevailing religion' of Greece.".
+
+#Medical_Info
+obj:Tap_Water a stkg:Medical_Info;
+	stkg:answer obj:Not_Drinkable;
+	sch:name "Tap Water".
+	
+obj:Not_Drinkable sch:name "Not Drinkable";
+	sch:description "Don't Drink the Tap Water. The Cyclades islands have a general problem with water, the lime content is at an all time high. And since there has been no successful solution with de-salinating the water, except in Oia which has its own desalination plant, anything you drink should be bottled. For bathing and general washing feel free to use tap water. Water conservation is high priority & considered valuable on the island, since it is brought in from the mainland, & visitors should respect this. All kiosks sell bottled water, but more reasonable prices can be found at larger supermarkets.".
+
+#General_Info
+obj:Electrical_Plug a stkg:General_Info;
+	stkg:answer obj:TypeC_Europlug;
+	sch:description "Like in most European countries, Greece uses the Type C electrical plug or Europlug so if you don’t have this electric type you will need an adaptor. The electric current is 220 volt." ;
+	sch:name "Electrical Plug".
+	
+obj:TypeC_Europlug sch:name "Type C electrical plug or Europlug";
+	sch:description "Like in most European countries, Greece uses the Type C electrical plug or Europlug so if you don’t have this electric type you will need an adaptor. The electric current is 220 volt.".
+
+obj:Spoken_Languages a stkg:General_Info;
+	stkg:answer obj:Greek, obj:English;
+	sch:name "Spoken Languages".
+	
+obj:Greek sch:name "Greek";
+	sch:description "The official language is Greek." .
+	
+obj:English sch:name "English";
+	sch:description "The majority of people can hold proper conversations in English and are friendly and eager to help.".
+	
