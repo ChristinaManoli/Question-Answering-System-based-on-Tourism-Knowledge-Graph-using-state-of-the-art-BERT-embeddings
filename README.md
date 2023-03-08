@@ -88,7 +88,7 @@ Our Question Answering System based on a Tourism KG was built using the followin
 10. NLTK Porter Stemmer, WordNet Lemmatizer
 11. Cosine Similarity
 12. py2neo driver
-13. SPACY Library NER
+13. SPACY Library (for NER)
 14. Pandas Dataframe
 15. sklearn metrics
 16. Truecase Library
