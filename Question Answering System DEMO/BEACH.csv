@@ -1,0 +1,13 @@
+Template|Cypher
+Beaches in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Visit]->(end:ns0__Beach) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end AS Entity2
+Quiet Beaches in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Visit]->(end:ns1__Quiet) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end AS Entity2
+Family-Friendly Beaches in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Visit]->(end:ns1__FamilyFriendly_Beach) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end AS Entity2
+What water sports to try in <Beach>?|MATCH p=(start{ns0__name:"<Beach>"})-[r:ns1__Do]->(end:ns1__Water_Activity) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Organized beach in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Visit]->(end) WHERE end:ns1__Well_Organized OR end:ns1__Partly_Organized RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Beach with blue flag in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r]->(end) WHERE end.ns1__Blue_Flag RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Where is <Beach>?|MATCH p=(start:ns1__Village)-[r]->(end:ns0__Beach) WHERE end.ns0__name="<Beach>" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+What are some Quiet beaches?|MATCH p=(start)-[r:ns1__Visit]->(end:ns1__Quiet) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Where can I find sandy beaches?|MATCH p=(start:ns1__Village)-[r:ns1__Visit]->(m:ns0__Beach)-[:ns1__sandType]->(end) WHERE end.ns0__name CONTAINS 'Sand' RETURN start.ns0__name AS Entity, Type(r) AS Relation, m.ns0__name AS Entity2_Name, end.ns0__name AS Type_Of_Sand
+What are some nudist beaches?|MATCH p=(start)-[:ns1__Visit]->(end:ns1__Nudism_Friendly) RETURN p
+What do you know about <Beach>?|MATCH p=(start{ns0__name:"<Beach>"})-[r]->(end) RETURN start.ns0__name AS Entity, labels(start) AS Labels, Type(r) AS Relation, end LIMIT 10
+Are there any well-organized beaches in <Place> and what can I do there?|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Visit]->(m:ns1__Well_Organized)-[r:ns1__Do]->(end) RETURN start.ns0__name AS Entity, m AS Beach , Type(r) AS Relation, end.ns0__name AS Entity2_Name

@@ -1,0 +1,4 @@
+Template|Cypher
+People born in Santorini|MATCH p=(start{ns0__name:"Santorini"})-[r:ns0__birthPlace]->(end:ns1__Notable_Person) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name, end.ns0__jobTitle AS Entity2_JobTitle
+People who died in Santorini|MATCH p=(start{ns0__name:"Santorini"})-[r:ns0__deathPlace]->(end:ns1__Notable_Person) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name, end.ns0__jobTitle AS Entity2_JobTitle
+Is <Notable Person> born in Santorini|MATCH p=(start{ns0__name:"Santorini"})-[r:ns0__birthPlace]->(end:ns1__Notable_Person) WHERE end.ns0__name="<Notable Person>" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name, end.ns0__jobTitle AS Entity_JobTitle

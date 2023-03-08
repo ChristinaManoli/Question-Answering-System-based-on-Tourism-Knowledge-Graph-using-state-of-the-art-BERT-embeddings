@@ -1,0 +1,9 @@
+Template|Cypher
+Historical Info about <Place>|MATCH (p) WHERE p.ns0__name = "<Place>" RETURN p.ns1__Brief_History AS Brief_History;
+Villages in Santorini|MATCH (start{ns0__name:"Santorini"})-[r:ns0__containsPlace]->(end:ns1__Village)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end AS Entity2
+What is Santorini also known as?|MATCH (start{ns0__name:"Santorini"})-[r:ns1__Also_Known_As]->(end)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name, end.ns1__Name_Origin AS Entity2_Name_Origin
+Myths about <Place>|MATCH (start{ns0__name:"<Place>"})-[r:ns1__Myths]->(end)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name, end.ns0__description AS Entity2_Description
+How can I get around in <Place>?|MATCH (start{ns0__name:"<Place>"})-[r:ns1__Get_Around]->(end)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+What do you know about <Place>?|MATCH p=(start{ns0__name:"<Place>"})-[r]->(end) RETURN start.ns0__name AS Entity, labels(start) AS Labels, Type(r) AS Relation, end LIMIT 10
+What are some family friendly places?|MATCH (start{ns0__name:"Santorini"})-[r:ns0__containsPlace]->(end:ns1__FamilyFriendly_Place)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+What are some romantic places?|MATCH (start{ns0__name:"Santorini"})-[r:ns0__containsPlace]->(end:ns1__Romantic_Place)RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name

@@ -1,0 +1,3 @@
+Template|Cypher
+Where can I find a hospital or medical center?|MATCH p=(start)-[r:ns1__healthcare]->(end) WHERE end:ns1__Medical_Center OR end:ns0__Hospital RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name
+Hospitals in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__healthcare]->(end:ns0__Hospital) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name

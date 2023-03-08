@@ -1,0 +1,3 @@
+Template|Cypher
+What is the weather of Santorini|MATCH p=(start{ns0__name:"Santorini"})-[r:ns1__weather]->(end:ns1__Climate) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end
+What is the weather like in <Month>?|MATCH p=(start{ns0__name:"Santorini"})-[r:ns1__weather]->(end:ns1__Climate) WHERE end.ns0__name="<Month> Weather" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end

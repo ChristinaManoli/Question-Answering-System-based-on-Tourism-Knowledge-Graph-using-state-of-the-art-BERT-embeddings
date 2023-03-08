@@ -1,0 +1,12 @@
+Template|Cypher
+What can a couple do in <Place>?|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Do]->(end:ns1__Romantic_Activity) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+What to do in <Place>?|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Do]->(end:ns1__Activity) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Can I go for a <Tour> in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Do]->(end:ns1__Tour) WHERE end.ns0__name="<Tour>" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+Activities to do in Santorini|MATCH p=(start{ns0__name:"Santorini"})-[*1..3]->(end:ns1__Activity) RETURN start.ns0__name AS Entity, end.ns0__name AS Entity2_Name
+Is <Festival> taking place during <Month>|MATCH (p) WHERE p.ns0__name="<Festival>" RETURN p.ns0__name, p.ns1__during;
+Can I try <Activity>?|MATCH p=(start{ns0__name:"Santorini"})-[*1..3]->(end:ns1__Activity) WHERE end.ns0__name="<Activity>" RETURN start.ns0__name AS Entity, end.ns0__name AS Entity2_Name
+What water sports can I do in <Beach>?|MATCH p=(start{ns0__name:"<Beach>"})-[r:ns1__Do]->(end:ns1__Water_Activity) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity2_Name
+
+
+
+

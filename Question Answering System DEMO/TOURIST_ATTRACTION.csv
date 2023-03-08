@@ -1,0 +1,5 @@
+Template|Cypher
+What are the best attractions someone should see in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[*1..2]->(end:ns0__TouristAttraction) RETURN start.ns0__name AS Entity, end.ns0__name AS Entity_Name
+What attractions are close to <Beach>|MATCH p=(start{ns0__name:"<Beach>"})<-[r:ns1__Visit]-(middle)-[r:ns1__See]->(end:ns0__TouristAttraction) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name
+Churches in <Place>|MATCH p=(start{ns0__name:"<Place>"})-[*1..2]->(end:ns1__Place_of_Worship) RETURN start.ns0__name AS Entity, end.ns0__name AS Entity_Name
+Romantic attractions for couples|MATCH p=(start{ns0__name:"Santorini"})-[*1..2]->(end:ns1__Romantic_Attraction) RETURN start.ns0__name AS Entity, end.ns0__name AS Entity_Name

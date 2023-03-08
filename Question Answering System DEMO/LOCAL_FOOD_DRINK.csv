@@ -1,0 +1,4 @@
+Template|Cypher
+Famous local cuisine / products of Santorini|MATCH p=(start{ns0__name:"Santorini"})-[r]->(end) WHERE end:ns1__LocalCuisine OR end:ns1__LocalWine RETURN start.ns0__name AS Entity, Type(r) AS Relation,  end.ns0__name AS Entity2_Name, end.ns0__description AS Entity2_Description
+What to eat in Santorini?|MATCH p=(start{ns0__name:"Santorini"})-[r:ns0__EatAction]->(end:ns1__LocalCuisine) RETURN start.ns0__name AS Entity, Type(r) AS Relation,  end.ns0__name AS Entity2_Name, end.ns0__description AS Entity2_Description
+What to drink in Santorini?|MATCH p=(start{ns0__name:"Santorini"})-[r:ns0__DrinkAction]->(end:ns1__LocalWine) RETURN start.ns0__name AS Entity, Type(r) AS Relation,  end.ns0__name AS Entity2_Name, end.ns0__description AS Entity2_Description

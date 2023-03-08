@@ -1,0 +1,5 @@
+Template|Cypher
+What should I know before going to <Place>?|MATCH p=(start{ns0__name:"<Place>"})-[r:ns1__Useful_Information]->(end)-[:ns1__answer]->(a) RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name, a.ns0__name AS Answer
+What papers do I need in order to rent a car in Greece?|MATCH p=(start:ns1__Driving_Info)-[r:ns1__answer]->(end) WHERE start.ns0__name = "Rental Car License" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name
+Where can I find an ATM?|MATCH p=(start)-[r:ns1__Useful_Information]->(end:ns1__Financial_Info) WHERE start:ns1__Village OR end.ns0__name="Cash machines (ATM's)" RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name, end.ns0__description AS Description
+What is some important driving information?|MATCH p=(start)-[r:ns1__Useful_Information]->(end:ns1__Driving_Info)-[*0..1]->() RETURN start.ns0__name AS Entity, Type(r) AS Relation, end.ns0__name AS Entity_Name, end.ns0__description AS Description, a
