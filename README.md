@@ -4,8 +4,7 @@
 In this paper, we conduct a thorough and extensive research on both Knowledge Graphs and Question
 Answering Systems in order to highlight their potential and ultimately develop our own QA System that employs our original,
 purpose-built (domain specific) Knowledge Graph for Tourism. You can find and read my Bachelor Thesis in the link below:
-https://docs.google.com/document/d/1m9gs8zJhQov8Wf7KgD73gdD1NYE4fZQBpU16X_fg7Sg/edit
-
+http://dspace.lib.uom.gr/handle/2159/28676 
 
 ## Research Problem
 It is true that, nowadays, there is an overabundance of (tourism) information scattered on the Web which makes it difficult to have a great tourist experience and be well informed about your next travel destination without the confusing and time consuming process of it.Creating a Question Answering system based on a Tourism Knowledge Graph offers the user the ability to question a system with a centralized and semantically rich knowledge about their next travel destination and as a result help them better plan their itinerary
